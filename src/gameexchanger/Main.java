@@ -11,17 +11,16 @@ import java.io.IOException;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("Game Exchanger");
-        primaryStage.setScene(new Scene(root, 900, 600));
+        primaryStage.setScene(new Scene(root, 600, 450));
         primaryStage.show();
         handleDatabase();
     }
 
-    public static void handleDatabase() throws IOException {
-        DBController dbController = new DBController();
-        dbController.writeToFile("Czesc, to moja baza danych");
+    public static void handleDatabase() {
+        //DBController dbController = new DBController();
     }
 
     public static void main(String[] args) throws IOException {
